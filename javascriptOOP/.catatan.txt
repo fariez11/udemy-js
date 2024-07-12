@@ -56,3 +56,8 @@ Prototype
             ~> ketika mengakses property di object instance, pertama akan di cek apakah di object tersebut terdapat property tsb atau tidak,
                jika tidak, maka akan dicek di _proto_(protoype) nya, jika tidak ada, akan dicek lagi di _proto_ yang lebih tinggi, begitu seterusnya
                sampai berakhir di Object Prototype.
+
+_____________________
+Prototype Inheritance      
+    - hal ini juga bisa dilakukan, namun agak sedikit triky, karena hal ini sebenarnya untuk JS Modern, tidak direkomendasikan lagi dipraktek OOP
+      menggunakan protoype, karena di ES(EcmaScript) 6 sidan dikenakan kata kunci class yang nanti akan dibahas di chapter sendisi :P

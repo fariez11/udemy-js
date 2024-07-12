@@ -1,0 +1,58 @@
+______________
+Pengenalan OOP
+    > Apa itu class
+        - Class berisikan deklarasi semua propertis dan function yang dimiliki oleh Object.
+        - Setiap Object selalu dibuat dari class
+        - Dan sebuah Class bisa membuat object tanpa batas
+    > OOP di js
+        - JS sendiri sebenarnya sejak awal dibuat sebagai bahasa prosedural, bukan bahasa OOP
+        - oleh karna itu, implemetasi OOP di JS memang tidak sedetail bahasa pemrograman yang 
+          lain yang memang dari awal merupakan bahasa pemrograman OOP seperti Java / C++
+____________________
+Constructor Function
+    > Membuat constructor function
+        - Sebelum EcmaScript versi 6 , pembuatan class, biasanya menggunakan function. Hal ini dikarenakan 
+          sebenarnya JS bukanlah bahasa pemrograman yang fokus ke OOP
+        - Untuk membuat classdi javascript lama, kita bisa membuat function
+        - Function ini kita sebut dengan Constructor Function 
+
+    > Membuat object dari constructor function
+        - setelah kita membuat class, jika kita ingin membuat object dari class tsb, kita bisa menggunakan 
+          kata kunci new, lalu diikuti dengan nama constructor func kita
+____________________________
+Property di Constructor Func
+__________________________
+Method di Constructor Func
+    - jika kita tambahkan method di constructor function, secara otomatis object yang dibuat akan memiliki method tersebut
+
+_____________________________
+Parameter di Constructor Func
+_______________________
+Constructor Inheritance
+    - didalam constructor kita bisa memanggil constructor lain, dengan begitu kita bisa mewarisi
+      semua property yang dibuat di constructor lain tsb.
+    - untuk memanggil constructor lain, kita bisa menggunakan NamaConstructor.call(this, parameter)
+
+_________
+Prototype
+    - javascript sebelumnya dikenal dengan pemrograman berbasis Prototype
+
+    > Prototype Inheritance
+        - Saat kita membuat object dari constructor function, object tsb disebut instance,semua property
+          (value / method), akan berada didalam instance objectnya.
+        - Setiap kita membuat sebuah constructor function, maka secara otomatis akan dibuatkan prototypenya
+          ,misal ketika kita membuat constructor func Person, maka akan ada Person.prototypenya
+        - Saat kita membuat sebuah object instance, secara otomatis object tsb adalah turunan dari 
+          Constructor.prototype nya
+        - Untuk mengakses prototype milih sebuah instance, kita bisa menggunakan _proto_
+
+    > Menambah property ke prototype
+        - Property mirip object, dimana kita bisa menambah property baik itu value ataupun method
+        - Saat kita menambah property ke Prototype, secara otomatis,semua object instance yang turunan dari prototype tsb
+          akan memiliki property tersebut
+
+    > Cara Kerja Protoype Inheritance
+        - Bagaimana bisa property diakses dari object instance?
+            ~> ketika mengakses property di object instance, pertama akan di cek apakah di object tersebut terdapat property tsb atau tidak,
+               jika tidak, maka akan dicek di _proto_(protoype) nya, jika tidak ada, akan dicek lagi di _proto_ yang lebih tinggi, begitu seterusnya
+               sampai berakhir di Object Prototype.

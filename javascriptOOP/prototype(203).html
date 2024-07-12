@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(firstName, lastName) {
+            this.firstName = firstName
+            this.sayHello = function (name) {
+                console.log(`Hello ${name}, my name is ${this.firstName} ${lastName}, you can call me ${this.nickName}`);
+            }
+        }
+
+        
+      
+
+        const ahmad = new Person("Ahmad", "Muhammad")
+        ahmad.nickName = "Thaha"
+        ahmad.sayHello("Adam")
+        ahmad.sayThanks = function(){                                        // menambahkan property di object
+            console.info("Syukron");
+        }
+        ahmad.sayBye = function(){                                           // *jika pada instance ahmad telah ditambahkan maka pada instance yang lain akan ditimpa
+            console.info("Sampai Jumpa");
+        }
+        
+
+        Person.prototype.sayAddition = function(){                           // menambahkan property ke protoype
+            console.info("Jazakumullah Khairan Katsiran");
+        }
+
+        Person.prototype.sayBye = function(){                                // *prototype yang ditimpa
+            console.info("Good Bye");
+        }
+
+
+        const hasan = new Person("Hasan", "Husein")
+
+        console.warn(ahmad);
+        console.warn(hasan);
+
+        ahmad.sayThanks()
+        hasan.sayAddition()
+        ahmad.sayBye()
+    </script>
+
+
+</body>
+    <!-- note : check in console in web -->
+</html>

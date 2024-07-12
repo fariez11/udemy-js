@@ -109,5 +109,11 @@ note* :
     - ketika childnnya ingin membuat constructor maka wajib memanggil constructor yang ada di parent nya juga (walupun diparentnya tidak constructor)
         cara panggil : super(optional)
 
+____________ 
+Super Method
+    - Selain digunakan untuk memanggil constructor milih parent class, kata kunci super juga bisa digunakan untuk mengakses method parent class.
+    - caranya bisa menggunakan super titik nama function nya
+    - dengan kata lain, super sebenarnya adalah reference ke parent prototype, mirip seperti _proto_
+
 
         

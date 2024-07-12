@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contructor</title>
+</head>
+
+<body>
+    <script>
+        class Member {
+            constructor(firstName){                                                      // otomatis akan dimiliki oleh turunannya
+                this.firstName = firstName
+            }
+
+            sayHello(name) {
+                console.log(`Hello ${name}, my name is member ${this.firstName}`);
+            }
+        }
+
+        class Captain extends Member {                                                  // inheritance
+
+            constructor(firstName,lastName){                                            
+                super(firstName)                                                        // memanggil constructor parentnya
+                this.lastName = lastName
+            }
+
+            sayHello(name) {
+                console.log(`Hello ${name}, my name is captain ${this.firstName} ${this.lastName}`);
+            }
+        }
+
+        const gita = new Member("Gita")
+        gita.sayHello("zee")
+
+
+        const shani = new Captain("Shani","Indira")
+        shani.sayHello("zee")
+
+
+        // check using inspect element
+        console.log(gita);
+        console.log(shani);
+    </script>
+</body>
+
+</html>

@@ -96,6 +96,18 @@ Class Inheritance
     - sebuah class bisa melakukan pewarisan dari class lainnya dengan menggunakan kata kunci extends
     - di JS, class inheritance sama seperti prototype inheritance, hanya bisa memiliki parent class
 
+_________________ 
+Super Constructor
+    - Class inheritance sifatnya seperti Prototype Inheritance
+    - Bagaimana dengan Constructor Inheritance ? sebenarnya constructor inheritance hanyalah melakukan eksekusi constructor lain
+      dengan tujuan agar property di constructor lain bisa ditambahkan ke instance object ini
+    - dalam kasus ini, jika kita ingin mencapai hasil yang sama, kita bisa menggunakan kata kunci super didalam constructor
+    - kata kunci super digunakan untuk memanggil constructor super class
+    - jika di child class kita membuat constructor, maka kita wajib memanggil parent constructor, walaupun di parent tidak ada constructor
+
+note* : 
+    - ketika childnnya ingin membuat constructor maka wajib memanggil constructor yang ada di parent nya juga (walupun diparentnya tidak constructor)
+        cara panggil : super(optional)
 
 
         

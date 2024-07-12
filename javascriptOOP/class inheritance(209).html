@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Member {
+            sayHello(name) {
+                console.log(`Hello ${name}, my name is member ${this.name}`);
+            }
+        }
+
+        class Captain extends Member {                                               // inheritance
+            // sayHello(name) {
+            //     console.log(`Hello ${name}, my name is captain ${this.name}`);
+            // }
+        }
+
+        const gita = new Member()
+        gita.name = "Andarini"
+        gita.sayHello("Gita")
+
+
+        const shani = new Captain()
+        shani.name = "Indira"
+        shani.sayHello("Shani")
+
+
+        // check using inspect element
+        console.log(gita);
+        console.log(shani);
+    </script>
+</body>
+
+</html>

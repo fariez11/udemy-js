@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Class Field</title>
+</head>
+<body>
+    <script>
+        class Configuration{
+            name = "Belajar JavaScript OOP"
+            static version = 1.1
+            static author = "Xaviera Putri"
+        }
+
+        const config = new Configuration()
+
+        console.log(config);
+        console.log(config.name);
+        console.log(config.version);                //  karena field ini sudah tidak ikut ke dalam objectnya 
+        console.log(Configuration.author);          //  akses static class field
+
+        Configuration.author = "Susi Trianawati"
+        console.log(Configuration.author);
+    </script>
+</body>
+</html>

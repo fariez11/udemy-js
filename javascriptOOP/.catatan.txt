@@ -120,5 +120,19 @@ Getter Setter in Class
     - Class juga mendukung pembuatan getter and Setter
     - perlu diingat, getter dan setter ini berada di prototype, bukan instance object
 
+___________ 
+Class Field
+    - biasanya, saat kita ingin menambahkan field (property yang berisi value),kita biasanya tambahkan di constructor
+    - namun, ada proposal di ES yang mengajukan pembuatan public class field ditempatkan diluar constructor
+      selevel dengan penempatan method 
+    - proposal ini masih belum final, namun beberapa browser sudah mendukungnya
+    - https://github.com/tc39/proposal-class-field
+
+  > Public class Field
+  > Private
+    - jika kita ingin membuat field yang bersifat private(hanya bisa diakses didalam class), kita bisa menggunakan
+      tanda # sebelum nama fieldnya
+
+
 
         

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Field</title>
+</head>
+<body>
+    <script>
+
+        // Public Class Field
+        class Person{
+            firstName
+            lastName
+            balance=0
+
+            constructor(firstName,lastName){
+                this.firstName = firstName
+                this.lastName = lastName
+            }
+
+            sayHello(){
+
+            }
+        }
+
+        const name = new Person()
+        console.log(name);
+
+        const nama = new Person("Phill", "Foden")
+        console.log(nama);
+
+
+        // Private Class Field
+        class Counter{
+            #number = 0
+            
+            increment(){
+                this.#number++
+            }
+
+            decrement(){
+                this.#number--
+            }
+
+            get(){
+                return this.#number
+            }
+
+        }
+
+        const penghitung = new Counter()
+        penghitung.increment()
+        penghitung.increment()
+        penghitung.increment()
+        console.log(penghitung.get());
+        penghitung.decrement()
+        console.log(penghitung.get());
+
+        penghitung.number = 1               // hasilnya dia menambah property baru bukan mengubah property sebelumnya
+        // penghitung.#counter = 11
+        console.log(penghitung);
+
+
+    </script>
+</body>
+</html>

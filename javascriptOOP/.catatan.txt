@@ -115,5 +115,10 @@ Super Method
     - caranya bisa menggunakan super titik nama function nya
     - dengan kata lain, super sebenarnya adalah reference ke parent prototype, mirip seperti _proto_
 
+______________________ 
+Getter Setter in Class
+    - Class juga mendukung pembuatan getter and Setter
+    - perlu diingat, getter dan setter ini berada di prototype, bukan instance object
+
 
         

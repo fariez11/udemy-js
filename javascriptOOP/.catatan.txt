@@ -201,3 +201,18 @@ Class Error
   > Membuat Class Error Manual
     - untuk membuat error sendiri secara manual sangatlah mudah, cukup membuat class turunan class Error
     - dan jangan lupa tambahkan parameter message, agar bisa dikirimkan ke parameter di constructor class Error
+
+_____________________ 
+Iterable dan Iterator
+    - adalah spesial object yang memiliki standarisasi
+    - dengan mengikuti standarisasi iterable, secara otomatis kita bisa melakukan iterasi terdapat data tersebut 
+      dengan menggunakan perulangan for...of
+    - contoh yang sudah mengikuti adalah String,Array, Object dll
+
+
+>>>>>>>>>
+  - JS Standard Library
+  - JS Modules
+  - JS DOM
+  - JS Async
+  - JS Web API

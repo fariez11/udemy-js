@@ -179,3 +179,19 @@ Error
       melempar error (throw error)
     - untuk melempar error kita bisa menggunakan kata kunci thow, diikuti dengan instance object errornya
     - jika terjadi error maka otomatis kode program kita berhenti, dan kita bisa melihat detal errornya
+
+______________ 
+Error Handling 
+    - di JS kita bisa menangkap jika terjadi error
+    - kita bisa menggunakan try catch statement untuk menangkap error
+    - pada block try, kita akan mencoba mengakses kode program yang bisa menyebabkan error, dan jika terjadi error
+      block try akan berhenti dan otomatis masuk ke block catch
+    - jika tidak terjadi error, block catch  tidak akan dieksekusi
+  
+  > Kata Kunci finally
+    - dalam try catch kita bisa menambahkan block finally
+    - block finally ini akan selalu dieksekusi setelah try catch selesai, entah terjadi error atau tidak (selalu dieksekusi) 
+    
+  > try Finnaly 
+    - kata kunci Finally juga bisa digunakan tanpa perlu menggunakan catch
+    - Biasanya ini digunakan dalam kasus tertentu

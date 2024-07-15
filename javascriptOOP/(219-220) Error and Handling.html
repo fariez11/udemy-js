@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error & Their Handling</title>
+</head>
+<body>
+    <script>
+        class mathUtil{
+            static sum(...numbers){
+
+                if(numbers.length > 0){
+                    // throw new Error("total parameter harus lebih dari 0")                // simple version
+                    const err = new Error("total parameter harus lebih dari 0")
+                    throw err
+                }
+
+                let total = 0
+                for(const number of numbers){
+                    total += number
+                }
+
+                return total
+            }
+        }
+        
+        // const result = mathUtil.sum(-1)
+        // console.log(result);
+        // console.log("manchester united");
+
+        try{
+            console.log(mathUtil.sum(-2));
+            console.log(":P");                  // jika tidak error maka log ini akan dieksekusi
+        }catch(error){
+            console.warn(`Terjadi Error : ${error.message}`);
+        }finally{
+            console.info("Program telah selesai");
+        }
+        console.log('15 Juli -1 HUT Lexi');
+
+        
+        class Counter {
+            #number = 0
+
+            next(){
+                try{
+                    return this.#number
+                }finally{
+                    this.#number++
+                }
+            }
+        }
+
+        const counter = new Counter()
+        console.info(counter.next());
+        console.log(counter.next());
+        console.log(counter.next());
+        
+    </script>
+</body>
+</html>

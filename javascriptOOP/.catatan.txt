@@ -133,6 +133,11 @@ Class Field
     - jika kita ingin membuat field yang bersifat private(hanya bisa diakses didalam class), kita bisa menggunakan
       tanda # sebelum nama fieldnya
 
+______________ 
+Private Method
+    - access modifier juga bisa digunakan di merhod
+    - caranya sama, dengan cara menambahkan tanda # diawal method, maka secara otomatis method tsb adalah private
+    
 
 
         

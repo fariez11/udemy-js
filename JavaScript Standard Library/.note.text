@@ -1,0 +1,38 @@
+______
+NUMBER
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+    - https://lansweeper.com/knowledgebase/list-of-currency-culture-codes/
+
+______ 
+STRING
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+_____
+ARRAY
+    > Array Queue
+        - dalam struktur data, terdapat tipe struktur data bernama queue (antrian)
+        - dimana data masuk akan diposisikan di urutan paling belakang
+        - sedangkan data keluar akan diposisikan dari urutan paling depan (use shift())
+        - istilahnya FIFO (First In First Out)
+    
+    > Array Stack
+        - kebalikan dari queue
+        - sifatnya LIFO (Last In First Out)
+        - untuk menambah diurutan paling belakang bisa menggunakan push()
+        - untuk menghapus paling belakang bisa menggunakan pop()
+
+______ 
+OBJECT
+    > Object Freeze & Seal
+        - secara default, object bisa diubah2 atau dihapus
+        - agar object jadi tidak bisa diubah atau dihapus, maka bisa memakai static method
+        - Object.freeze() mengubah object agar object jadi tidak bisa diubah atau dihapus attributnya
+        - Object.seal() mengubah object agar object jadi tidak bisa dihapus attributnya
+
+    > Object Assign
+        - untuk menggabungkan semua attribut dari sebuah object ke object lain
+    
+    > Object Property Name & Value
+        - object juga memiliki static method untuk mengambil semua properties names dan Value
+        - Object.values() untuk mengambil semua property value
+        - Object.getOwnPropertyName() untuk mengambil semua property name

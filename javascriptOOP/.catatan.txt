@@ -84,7 +84,7 @@ Property di Class
 
 _______________
 Method di Class
-    - membuat method di class sebenarnya bisa dilakukan dengan cara seperti menambahkan mehtod di constructor function
+    - membuat method di class sebenarnya bisa dilakukan dengan cara seperti menambahkan method di constructor function
     - namun hal tersebut sebenarnya menambahkan method ke dalam instance object
     - khusus untuk method sebaiknya kita menambahkan ke prototype, bukan ke instance object
     - untungnya di class, ada cara mudah untuk menambahkan method dan secara otomatis ditambahkan ke prototype
@@ -161,3 +161,10 @@ Kata Kunci static
     - biasanya static digunakan jika kita ingin membuat utility field atau function
     - cara mengakses static class field pun tidak lagi lewat object, melainkan lewat classnya
     - Static class field bisa diartikan sifatnya global, tidak peduli diakses dimana atau siapa yang penting, hasilnya sama
+  
+_____________   
+Static method
+  - kata kunci static juga tidak hanya bisa ditambahkan difield, tapi juga di method
+  - jika kita tambahkan di method, artinya method tersebut jadi milik class nya, bukan prototype
+  - dan untuk mengakses method tersebut, kita juga bisa lakukan seperti mengakses static class field
+  

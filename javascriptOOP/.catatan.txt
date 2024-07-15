@@ -164,12 +164,18 @@ Kata Kunci static
   
 _____________   
 Static method
-  - kata kunci static juga tidak hanya bisa ditambahkan difield, tapi juga di method
-  - jika kita tambahkan di method, artinya method tersebut jadi milik class nya, bukan prototype
-  - dan untuk mengakses method tersebut, kita juga bisa lakukan seperti mengakses static class field
+    - kata kunci static juga tidak hanya bisa ditambahkan difield, tapi juga di method
+    - jika kita tambahkan di method, artinya method tersebut jadi milik class nya, bukan prototype
+    - dan untuk mengakses method tersebut, kita juga bisa lakukan seperti mengakses static class field
 
 _____ 
 Error
-  - banyak sekali class error di JS, namun semua class error di JS selalu berujung classError, artinya class Error
-    adalah superclass untuk semua jenis error diJS
-  - https://developer.mozilla.
+    - banyak sekali class error di JS, namun semua class error di JS selalu berujung classError, artinya class Error
+      adalah superclass untuk semua jenis error diJS
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError
+  
+  > Throw Error
+    - kita perlu memberitahu program kita, bahwa kita akan mentrigger sebuah error terjadi,atau istilahnya adalah
+      melempar error (throw error)
+    - untuk melempar error kita bisa menggunakan kata kunci thow, diikuti dengan instance object errornya
+    - jika terjadi error maka otomatis kode program kita berhenti, dan kita bisa melihat detal errornya

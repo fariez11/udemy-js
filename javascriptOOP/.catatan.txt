@@ -167,4 +167,9 @@ Static method
   - kata kunci static juga tidak hanya bisa ditambahkan difield, tapi juga di method
   - jika kita tambahkan di method, artinya method tersebut jadi milik class nya, bukan prototype
   - dan untuk mengakses method tersebut, kita juga bisa lakukan seperti mengakses static class field
-  
+
+_____ 
+Error
+  - banyak sekali class error di JS, namun semua class error di JS selalu berujung classError, artinya class Error
+    adalah superclass untuk semua jenis error diJS
+  - https://developer.mozilla.

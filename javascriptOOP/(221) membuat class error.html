@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Class Error</title>
+</head>
+<body>
+    <script>
+
+        class validationError extends Error{
+            constructor(message,code){
+                super(message)
+                this.code = code
+            }
+        }
+
+        class mathUtil{
+            static sum(...numbers){
+
+                if(numbers.length > 0){
+                    throw new validationError("total parameter harus lebih dari 0",500)                // simple version
+                  
+                }
+
+                let total = 0
+                for(const number of numbers){
+                    total += number
+                }
+
+                return total
+            }
+        }
+
+        try{
+            console.log(mathUtil.sum(-2));
+            console.log(":P");                  // jika tidak error maka log ini akan dieksekusi
+        }catch(error){
+            console.warn(`code : ${error.code} \n error : ${error.message}`);
+        }finally{
+            console.info("Program telah selesai");
+        }
+    </script>
+</body>
+</html>

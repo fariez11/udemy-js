@@ -195,3 +195,9 @@ Error Handling
   > try Finnaly 
     - kata kunci Finally juga bisa digunakan tanpa perlu menggunakan catch
     - Biasanya ini digunakan dalam kasus tertentu
+
+___________ 
+Class Error
+  > Membuat Class Error Manual
+    - untuk membuat error sendiri secara manual sangatlah mudah, cukup membuat class turunan class Error
+    - dan jangan lupa tambahkan parameter message, agar bisa dikirimkan ke parameter di constructor class Error

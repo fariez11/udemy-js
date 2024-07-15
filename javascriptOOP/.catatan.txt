@@ -137,7 +137,14 @@ ______________
 Private Method
     - access modifier juga bisa digunakan di merhod
     - caranya sama, dengan cara menambahkan tanda # diawal method, maka secara otomatis method tsb adalah private
-    
 
+___________________ 
+Operator instanceof
+    - kadang ada kasus kita ingin mengecek apakah sebuah object merupakan instance dari class tertentu atau bukan
+    - kita tidak bisa menggunakan operator typeof, karena object dari class, jika gunakan opearator typeof, hasilnya = "object"
+    - operator instanceof akan menghasilkan boolean, true jika benar obejct tersebut adalah instance objectnya, atau false jika bukan
 
+  > Operator instanceof di Class Inheritance
+    - operator instanceof mendukung class inheritance, artinya instanceof juga bisa digunakan untuk mengecek,
+      apakah sebuah object adalah instance dari class tertentu, atau turunan dari class tertentu 
         

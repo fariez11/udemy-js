@@ -36,3 +36,50 @@ OBJECT
         - object juga memiliki static method untuk mengambil semua properties names dan Value
         - Object.values() untuk mengambil semua property value
         - Object.getOwnPropertyName() untuk mengambil semua property name
+
+____ 
+JSON
+    - json singkatan dari JS Object Notation
+    - https://www.json.org/json-en.html
+
+______ 
+BIGINT
+    - merupakan data number yang bisa mencakup data angka lebih dari Number.MAX_SAFE_INTEGER
+    - cara penggunaan bigint sama aja dengan penggunaan Number (dan penggunaan operatornya)
+    - ciri-ciri : diujung angka dikasih huruf n ex: 123n
+
+____
+DATE 
+
+    > Epoch & Unix Timestamp
+        - merupakan hitungan milisecond setelah tgl 1 Januari 1970
+        
+    > Parsing Date
+        - parsing date ke string
+        - format harus YYYY-MM-DDTHH:mm:ss.sssZ
+
+    > Getter & Setter
+        - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+
+____
+MATH
+        - hanya bisa digunakan untuk tipe data Number, tidak bisa digunakan untuk tipe data bigint
+        - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math 
+
+_______ 
+BOOLEAN
+        - memiliki method toString() untuk menkonversi ke String
+        - dan memiliki method valueOf() untuk menkonversi ke tipe boolean primitif
+        - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean 
+
+___ 
+MAP 
+        - merupakan representasi dari struktur data key-value
+        - Map mirip dengan tipe data object, hanya saja semua method untuk manipulasi data sudah disediakan
+        - Map mengikuti kontrak iterable, sehingga bisa diiterasi secara default
+    
+    > Perbedaan             Map                           &                            Object
+        - Pertama dibuat, tidak memiliki key              X   karena memiliki prototype, jadi bisa memiliki default key ketika dibuat
+        - bisa data apapun                                X   hanya bisa menggunakan string atau symbol
+        - bisa tahu jumlah key (w/ attribut key)          X   tidak bisa diketahui, harus manual menggunakan iterasi
+        - secara default tidak bisa dikonversi ke JSON    X   bisa dikonversi ke JSON otomatis

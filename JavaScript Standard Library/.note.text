@@ -1,11 +1,11 @@
 ______
 NUMBER
-    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
-    - https://lansweeper.com/knowledgebase/list-of-currency-culture-codes/
+     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+     - https://lansweeper.com/knowledgebase/list-of-currency-culture-codes/
 
 ______ 
 STRING
-    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
 _____
 ARRAY
@@ -39,14 +39,14 @@ OBJECT
 
 ____ 
 JSON
-    - json singkatan dari JS Object Notation
-    - https://www.json.org/json-en.html
+     - json singkatan dari JS Object Notation
+     - https://www.json.org/json-en.html
 
 ______ 
 BIGINT
-    - merupakan data number yang bisa mencakup data angka lebih dari Number.MAX_SAFE_INTEGER
-    - cara penggunaan bigint sama aja dengan penggunaan Number (dan penggunaan operatornya)
-    - ciri-ciri : diujung angka dikasih huruf n ex: 123n
+     - merupakan data number yang bisa mencakup data angka lebih dari Number.MAX_SAFE_INTEGER
+     - cara penggunaan bigint sama aja dengan penggunaan Number (dan penggunaan operatornya)
+     - ciri-ciri : diujung angka dikasih huruf n ex: 123n
 
 ____
 DATE 
@@ -63,23 +63,75 @@ DATE
 
 ____
 MATH
-        - hanya bisa digunakan untuk tipe data Number, tidak bisa digunakan untuk tipe data bigint
-        - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math 
+     - hanya bisa digunakan untuk tipe data Number, tidak bisa digunakan untuk tipe data bigint
+     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math 
 
 _______ 
 BOOLEAN
-        - memiliki method toString() untuk menkonversi ke String
-        - dan memiliki method valueOf() untuk menkonversi ke tipe boolean primitif
-        - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean 
+     - memiliki method toString() untuk menkonversi ke String
+     - dan memiliki method valueOf() untuk menkonversi ke tipe boolean primitif
+     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean 
 
 ___ 
 MAP 
-        - merupakan representasi dari struktur data key-value
-        - Map mirip dengan tipe data object, hanya saja semua method untuk manipulasi data sudah disediakan
-        - Map mengikuti kontrak iterable, sehingga bisa diiterasi secara default
+     - merupakan representasi dari struktur data key-value
+     - Map mirip dengan tipe data object, hanya saja semua method untuk manipulasi data sudah disediakan
+     - Map mengikuti kontrak iterable, sehingga bisa diiterasi secara default
     
-    > Perbedaan             Map                           &                            Object
+    > Perbedaan             
+                            Map                           &                            Object
         - Pertama dibuat, tidak memiliki key              X   karena memiliki prototype, jadi bisa memiliki default key ketika dibuat
         - bisa data apapun                                X   hanya bisa menggunakan string atau symbol
         - bisa tahu jumlah key (w/ attribut key)          X   tidak bisa diketahui, harus manual menggunakan iterasi
         - secara default tidak bisa dikonversi ke JSON    X   bisa dikonversi ke JSON otomatis
+
+___ 
+SET 
+     - merupakan implementasi dari struktur data yang berisikan data-data unique
+     - set mirip seperti array, hanya saja isi datanya selalu unique
+     - jik kita menambahkan data yang sama, maka data hanya akan diterima satu saja
+     - set mengimplementasikan kontrak iterable, sehingga bisa diiterasi secara defaut
+
+______ 
+SYMBOL
+     - Symbol merupakan type data yang digaransi akan selalu unique setiap kali kita membuat data symbol
+     - Symbol kadang banyak digunakan untuk membuat key pada object
+    
+    > Symbol Fo
+        - kadang agak sulit membuat symbol harus selalu menggunakan variable
+        - pembuatan symbol juga bisa menggunakan static method Symbol.for(key)
+        - Jika keynya sama, symbol yang sama akan selalu dikembalikan
+
+______________
+REGEXP / REGEX
+     - merupakan implementasi dari regular expression di JS
+     - merupakan fitur untuk mencari text dengan pola
+     - membuat RegExp di JS bisa dilakukan dengan dua cara yaitu : literal notation / membuat object RegExp
+     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+    
+    > RegExp Instance Method (eksekusi regex)
+        - exec(val) :result  ~> jika menemukan data sesuai pola, maka dikembalikan resultnya
+                                jika tidak null
+        - test(val) :boolean ~> jika menemukan data sesuai pola, maka return true, jika tidak false
+    
+    > RegExp Modifier
+        ~> i : regex menjadi incase sensitive
+        ~> g : pencarian dilakukan secara global, secara default setelah menemukan data, pencarian akan berhenti
+        ~> m : multiline, pencarian dilakukan di tiap baris (enter)
+    
+    > fitur RegExp Lainnya
+        - Assersions : indikasi awal dan akhir teks
+            https://developer.mozilla.org/en-US/search?q=Assertions
+        - Character Classes : membedakan antara huruf dan angka 
+            https://developer.mozilla.org/en-US/search?q=CharacterClasess
+        - Groups dan Range : melakukan grouping atau range huruf atau angka 
+            https://developer.mozilla.org/en-US/search?q=Groups_and_Ranges
+        - Quantifiers : menentukan jumlah huruf atau angka
+            https://developer.mozilla.org/en-US/search?q=Quantifiers
+
+    > Regular Expression di String 
+        - match(regex) : Array
+        - search(regex) : index
+        - replace(regex,value)
+        - replaceAll(regex,value)
+        - split(regex) : Array

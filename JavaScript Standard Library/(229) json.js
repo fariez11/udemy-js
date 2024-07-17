@@ -1,7 +1,7 @@
 // stringify & parse
 
 const person = {
-    firstName : "Muhammad",
+    firstName : "Nabi Muhammad",
     lastName : "Shalallahu Alaihi Wassalam",
     date : "12 Rabiul Awwal / 20 April 571 Masehi",
     address : {

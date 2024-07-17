@@ -135,3 +135,75 @@ REGEXP / REGEX
         - replace(regex,value)
         - replaceAll(regex,value)
         - split(regex) : Array
+
+_____ 
+PROXY
+     - merupakan fitur yang bisa digunakan wakil sebuah data
+     - dengan menggunakan proxy, semua interaksi ke data akan selalu melalui proxy terlebih dahulu
+     - dengan ini kita bisa melakukan apapun sebelum interaksi dilakukan ke data yang dituju
+     https://developer.mozilla.org/en-US/Web/JavaScript/Reference/Global_Objects/Proxy
+    
+    > Proxy Handler
+        - pembuatan proxy perlu meggunakan handler, dimana dalam handler, kita bisa membuat function 
+          yang dinamakan interceptor (function yang selalu dipanggil ketika datanya di akses) yang digunakan
+          ketika mengambil data atau mengubah data ke target 
+        
+    > Proxy dan Handler
+        - saat mengubah data proxy, secara otomatis data akan dikirim ke target melalui handler dengan
+          memanggil function set(targetm property, value)
+        - saat mengambil data proxy, secara otomatis data akan diambil dari target melalui handler dengan
+          memanggil function get(target, property)
+        - jika kita ingin melakukan sesuatu sebelum dan setelahnya, bisa kita lakukan di handler
+
+_______ 
+REFLECT
+     - merupakan class yang digunakan untuk mengeksekusi JS function
+     - reflect tidak memiliki constructor, dan cara penggunaan reflect tidak dengan membuat object dengan new Reflect (utility)
+     - penggunaan reflect adalah menggunakan banyak sekali static methodnya 
+     https://developer.mozilla.org/en-US/Web/JavaScript/Reference/Global_Objects/Reflect
+
+
+______ 
+ENCODE
+     - saat menulis URL, kadang kita ingin menambahkan informasi tambahan seperti query param misalnya
+     - URL sendiri sudah memiliki standard encoding penulisan URL
+     - standard encoding ini dilakukan agar penulisan URL aman ketika diterima oleh server
+     - Aman disini dalam artian informasi URL tidak berubah
+     - contoh paling sederhan, walaupun kita bisa mengirim spasi dalam url, tapi disarankan untuk di encode
+       agar nilai spasi tidak benar-benar terlihat seperti spasi pada URL nya.
+    
+    > Contoh Masalah Tidak Menggunakan Encode 
+        - misal ada query parameter dengan nama data, lalu kita ingin mengirimkan nilai kesana
+        - misal nilainya adalah &eko=eko&, alhasil URL nya akan seperti berikut
+        - http://contoh.com?data=&eko=eko&
+        - URL diatas terlihat tidak ada masalah , tapi sebenarnya ketika diterima oleh server, parameter data
+          bernilai kosong, kenapa? karena '&' dianggap sebagai pemisah antar parameter
+        - atinya tanda seperti & dan lain lain perlu di encode, agar tidak terjadi kesalahan data yang kita kirim
+
+    > Encode function
+        - encodURI(val)              : melakukan encode value,namun karakter yang dipesan di URI tidak akan diubah (;,/?:@&=+$#)
+        - encodeURIComponent(val)    : melakukan encode value semua karakter
+        - decodeURI(encode)          : melakukan decode value hasil encodeURI()
+        - decodeURIComponent(encode) : melakukan decode value hasil encodeURIComponent()
+
+______ 
+BASE64
+     - merupakan binary to text encoding, representasi binary data dalam format string
+     - merupakan format text data yang aman untuk dikirimkan di Web
+     - merupakan encoding yang biasanya digunakan ketika perlu mengirim data dari client ke server
+     - karena encoding Base64 merupakan text, oleh karena itu sangat aman digunakan pada query param URL atau text body dalam form 
+     https://developer.mozilla.org/en-US/docs/Glossary/Base64
+     - perlu diingat bahwa Base64 itu untuk encode dan decode bukan enkripsi
+
+    > Base64 Function
+        - btoa(val)     : encode ke base64 dari value
+        - atob(encode)  : decode dari base64 ke value
+
+____
+EVAL (tidak disarankan untuk menggunakan ini)
+     - Eval merupakan function yang digunakan untuk mengeksekusi kode JS dari String
+     - Fitur ini sangat menarik, namun perlu hati hati untuk menggunakannya
+     - Jika sampai salah penggunaan, maka bisa jadi kita malah mengeksekusi kde program yang bisa
+       menyebabkan masalah keamanan website kita
+     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
+

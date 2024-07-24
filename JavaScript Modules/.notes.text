@@ -1,0 +1,45 @@
+___________ 
+Live Server
+    - saat kita menggunakan fitur JS Module, sangat disarankan untuk menjalankan kode JS kita dalam Web Server
+    - hal ini karena spesifikasi dari javascript module meminta secara default kode JS perlu di satu domain
+       server, jika kita membuat file html menggunakan URL file://, maka dikhawatirkan akan terjadi error CORS
+       (Cross Origin Resource Sharing)
+
+____________ 
+Tanpa Module
+  > Dengan Module
+      - namun jika kita menggunakan module, kita bisa secara efektif memilih bagian kode mana yang ingin kita
+        expor keluar
+      - secara default, kode yang kita buat menggunakan JS Module tidak bisa digunakan dari luar file, kecuali
+        kita memintanya untuk mengekspor keluar
+
+______________ 
+Membuat Module
+    - membuat module, sangat sederhana, kita cukup membuat file JS saja
+    - yang membedakan adalah, saat kita akan menload file JS dari HTML, kita tidak menggunakan type js lagi,
+      melainkan menggunakan type module
+  
+  > File .js dan .mjs
+      - karena file JS Module sama sebenarnya dengan JS, kadang developer membedakan nama file untuk JS Module
+        menggunakan mjs
+      - hal ini sebenarnya tidak ada kewajiban, hanya saja agar mempermudah ketika tahapan dev, kita bisa dengan 
+        mudah membedakan mana file JS biasa, mana file JS Module hanya dengan extensio filenya saja
+    
+    - secara default, saat kita menggunakan fitur JS Module, semua code (function, variable, class dan lain lain)
+      tidak akan di ekspor keluar module tersebut
+    - jika kita ingin mengekspos kode tsb, kita harus memberitahunya secara explisit
+  
+_______
+Eksport
+    - export bisa ditambahkan diawal sebuah variable,function & class
+
+______ 
+Import
+    - export digunakan untuk mengekspos kode di module, jika kita ingin menggunakan kode yang sudah di ekspos
+      di module, kita bisa menggunakan kata kunci import
+    - cara menggunakan kata kunci import adalah sebagai berikut:
+      import {namaFunction, namaVarible, NamaClass} from "lokasi-module.js"
+    - module hanya bisa digunakan di module lain, jadi dipastikan ketika membuat script, kita harus menggunakan
+      type module
+    - saat menggunakan import, kita tidak perlu lagi menambahkan script module src satu persatu, karena sudah
+      dihandle oleh browser secara otomatis ketika menggunakan module

@@ -91,3 +91,11 @@ Aggregating Module
     - ada waktunya kadang kita ingin meng aggregate module menjadi satu agar penggunanya lebih sederhana
     - jika module sudah banyak, maka ketika butuh banyak module, kita harus sebutkan nama module tersebut setiap import 
     - dengan melakukan aggregate, kita bisa membuat module aggregate, yang isinya menggabungkan export dari module lain
+
+______________________ 
+Dynamic Module Loading
+    - saat kita menggunakan module dengan cara import, maka semua module akan di load
+    - pada kenyataannya, kadang kita tidak ingin menload semua module diawal, kita ingin menload module ketika 
+      dibutuhkan saja, ini akan menghemat bandwith jaringan juga, karena kita tidak perlu download semua module diawal
+    - JS mendukung dynamic module loading, caranya kita bisa menggunakan function import(), yang dimana hasilnya
+      berupa promise<Module Object>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="scripts/library.js"></script> -->
+    <script type="module" src="scripts/(248-253) export and import.js"></script>
+    <script type="module" src="scripts/(254-255) multiple.js"></script>
+    <title>Javascript Modules</title>
+</head>
+<body>
+    
+    <script type="module">
+        // export dan import
+            import {sayHello, sayGBye, name, Member} from "./scripts/(248-253) export and import.js"
+            sayHello('Freya')
+            sayGBye('Gita')
+            console.log(name);
+            const member = new Member("Reva")
+            member.sayHello("Robby")
+        
+
+        // alias in import
+            import {club, sum, Player} from "./scripts/(254-255) multiple.js"
+            console.info(club);
+            console.info(sum(7,4));
+            console.info(new Player("Joshua Zirkzee"));
+
+
+        // default import
+            // import sayHelloDefault from "./scripts/(256) default export.js"
+            // sayHelloDefault("Flora")
+            
+            // import player from "./scripts/(256) default export.js"
+            // console.log(player);
+            
+            // import Person from "./scripts/(256) default export.js"
+            // const person = new Person("Ust. Abdullah Awad Abdun")
+            // person.sayHi()
+
+
+        // import default dan named 
+            import authorName, {title,content} from './scripts/(256) default export.js'
+
+            console.log(title + " (" + content +")" + " - " + authorName);
+    
+    </script>
+</body>
+</html>

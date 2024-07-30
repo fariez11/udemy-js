@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Object</title>
+
+    <script type="module" src="./scripts/(257) module object.js"></script>
+</head>
+<body>
+    <script type="module">
+        import * as Testing from "./scripts/(257) module object.js"
+
+        console.log(Testing.firstName);
+        console.log(Testing.middleName);
+        console.log(Testing.lastName);
+        Testing.hello()
+
+        const person = new Testing.Person()
+        console.info(person.name);
+    </script>
+</body>
+</html>

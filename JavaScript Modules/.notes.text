@@ -61,6 +61,7 @@ Export Multiple
     - module memiliki fitur alias, dimana kita bisa mengubah nama variable, function atau class nya
   
   > Alias di Export
+    - tidak disarankan menggunakan alias pada export
   > Alias di Import
 
 ______________ 

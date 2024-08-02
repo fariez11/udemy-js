@@ -1,14 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO List</title>
+    <title>To Do List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </link>
 </head>
 
 <body class="bg-dark bg-gradient" style="height: 100vh;">
@@ -18,32 +18,32 @@
         <div class="row justify-content-center pt-2">
 
             <div class="col-5">
-
-
-                <div class="dropdown-menu d-block position-static border-0 py-0 mx-0 rounded-3 shadow overflow-hidden gap-2 mb-2"
+                <div class="dropdown-menu d-block position-static border-0 py-0 mx-0 rounded-top-4 rounded-end-1 shadow overflow-hidden gap-2 mb-1"
                     data-bs-theme="dark">
-                    <form class="p-2 my-2 bg-dark border-bottom border-dark" name="todoForm" >
+                    <form class="p-2 my-2 bg-dark border-bottom border-dark" name="todoForm">
                         <div class="row px-2">
                             <div class="col-10">
-                                <input type="text"name="todo" id="todo" class="form-control bg-dark" autocomplete="off" placeholder="task" required>
+                                <input type="text" name="todo" id="todo" class="form-control bg-dark" autocomplete="off"
+                                    placeholder="task" required>
                             </div>
                             <div class="col">
-                                <button class="btn btn-outline-secondary w-100"><i class="bi bi-plus-circle"></i></button>
+                                <button class="btn btn-outline-secondary w-100 h-100"><i class="bi bi-plus-circle"></i></button>
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <div class="dropdown-menu d-block position-static border-0 p-2 mx-0 rounded-3 shadow overflow-hidden w-280px"
+                <div class="dropdown-menu d-block position-static border-0 p-2 mx-0 rounded-bottom-4 rounded-start-1 shadow overflow-hidden w-280px"
                     data-bs-theme="dark">
                     <form class="p-2 mb-2 bg-dark border-bottom border-dark">
-                        <input type="search" name="search" class="form-control bg-dark" autocomplete="false" placeholder="Search...">
+                        <input type="search" name="search" id="search" class="form-control bg-dark" autocomplete="off"
+                            placeholder="search...">
                     </form>
                     <ul class="list-unstyled mb-0" id="listBody">
                         <!-- <li>
                             <a class="dropdown-item align-items-center gap-2 py-2">
                                 <input class="form-check-input flex-shrink-0" type="checkbox">
-                                <span class="px-1">Kosong</span>
+                                <span class="px-1">Berdoa & niat</span>
                                 <button type="button" class="btn-close float-end" aria-label="Close"></button>
                             </a>
                         </li> -->
@@ -54,63 +54,91 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
     <script>
-        const todoList = []
+        const todoList = ["Berdoa & niat"]
 
-        function clearTodoList(){
-            const listB = document.getElementById('listBody')
-            
-                while(listB.firstChild){
-                    listB.removeChild(listB.firstChild)
-                }
-            
-        }
+        function clearTodoList() {
+            const list = document.getElementById('listBody')
 
-        function displayTodoList(){
-            clearTodoList()
-
-            for (let i = 0; i < todoList.length; i++) {
-                const todo = todoList[i]
-                
-                const li = document.createElement('li')
-                const a = document.createElement('a')
-                a.classList.add('dropdown-item','align-items-center', 'gap-2', 'py-2')
-                
-                const span = document.createElement('span')
-                span.setAttribute('class','px-1')
-                span.textContent = todo
-                a.appendChild(span)
-                
-                const btn = document.createElement('button')
-                btn.setAttribute('type','button')
-                btn.classList.add('btn-close','float-end')
-                btn.setAttribute('aria-label','Close')
-                a.appendChild(btn)
-
-                li.appendChild(a)
-                
-                const list = document.getElementById('listBody')
-                list.appendChild(li)
+            while (list.firstChild) {
+                list.removeChild(list.firstChild)
             }
 
         }
 
-        document.forms['todoForm'].onsubmit = function(event){
+        function removeTodo(index) {
+            todoList.splice(index, 1)
+            displayTodoList()
+        }
+
+        function addTodoList(todo, index) {
+            const li = document.createElement('li')
+            const a = document.createElement('a')
+            a.classList.add('dropdown-item', 'align-items-center', 'gap-2', 'py-2')
+
+            const span = document.createElement('span')
+            span.setAttribute('class', 'px-1')
+            span.textContent = todo
+            a.appendChild(span)
+
+            const btn = document.createElement('button')
+            btn.setAttribute('type', 'button')
+            btn.classList.add('btn-close', 'float-end')
+            btn.setAttribute('aria-label', 'Close')
+            btn.onclick = function () {
+                removeTodo(index)
+            }
+            a.appendChild(btn)
+
+            li.appendChild(a)
+
+            const list = document.getElementById('listBody')
+            list.appendChild(li)
+        }
+
+        function displayTodoList() {
+            clearTodoList()
+
+            for (let i = 0; i < todoList.length; i++) {
+                const todo = todoList[i]
+
+                const searchInput = document.getElementById('search').value.toLowerCase()
+
+                if (todo.toLowerCase().includes(searchInput)) {
+                    addTodoList(todo, i)
+                }
+            }
+
+        }
+
+        const search = document.getElementById('search')
+        search.onkeyup = function () {
+            displayTodoList()
+        }
+
+        search.onkeydown = function () {
+            displayTodoList()
+        }
+
+
+        document.forms['todoForm'].onsubmit = function (event) {
             event.preventDefault()
 
             const todo = document.forms['todoForm']['todo'].value
             todoList.push(todo)
-
             document.forms['todoForm'].reset()
 
             displayTodoList()
 
         }
+
+
     </script>
-    
+
 </body>
 
 </html>

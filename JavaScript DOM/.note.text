@@ -1,56 +1,77 @@
 ______________ 
 Pengenalan DOM
-    - ketika sebuah website di load, maka browser akan membuat Document Object Model untuk halaman website tsb
-    - DOM dibuat dalam bentuk tree (pohon) yang tiap cabangnya berisikan object dari jenis elemen html
-    - JS memiliki kemampuan untuk memanipulasi DOM, artinya denganJS, kita bisa mengakses tiap object di DOM 
-      bahkan memanipulasi object nya
+  - ketika sebuah website di load, maka browser akan membuat Document Object Model untuk halaman website tsb
+  - DOM dibuat dalam bentuk tree (pohon) yang tiap cabangnya berisikan object dari jenis elemen html
+  - JS memiliki kemampuan untuk memanipulasi DOM, artinya denganJS, kita bisa mengakses tiap object di DOM 
+    bahkan memanipulasi object nya
 
-        ex: document~> HTML(root element)   ~> <head>   ~> <title>  ~> text "myTitle"
-                                            ~> <body>   ~> href(attr)
-                                                        ~> <a>      ~> text "myLink"
-                                                        ~> <h1>     ~> text "myHeader"
+      ex: document~> HTML(root element)   ~> <head>   ~> <title>  ~> text "myTitle"
+                                          ~> <body>   ~> href(attr)
+                                                      ~> <a>      ~> text "myLink"
+                                                      ~> <h1>     ~> text "myHeader"
 
-    > DOM dan JS
-      - DOM bukanlah fitur atau bahasa pemrograman, DOM sebenarnya hanyalah representasi Object dari struktur
-        halaman web
-      - DOM sendiri sebenarnya bukanlah bagian dari bahasa pemrograman JS, melainkan bagian dari WEB API
-      - DOM di desain agnostik, artinya sebenarnya bisa digunakan menggunakan bahasa pemrograman apapun, karena
-        memang untuk membuat Web, kita tidak hanya bisa menggunakan bahasa pemrograman JS (Java atau PHP itu 
-        juga bisa untuk mengelola DOM) 
+  > DOM dan JS
+    - DOM bukanlah fitur atau bahasa pemrograman, DOM sebenarnya hanyalah representasi Object dari struktur
+      halaman web
+    - DOM sendiri sebenarnya bukanlah bagian dari bahasa pemrograman JS, melainkan bagian dari WEB API
+    - DOM di desain agnostik, artinya sebenarnya bisa digunakan menggunakan bahasa pemrograman apapun, karena
+      memang untuk membuat Web, kita tidak hanya bisa menggunakan bahasa pemrograman JS (Java atau PHP itu 
+      juga bisa untuk mengelola DOM) 
     
 _______________ 
 Membuat Project
 
 _________ 
 Tipe Data
-    - DOM memiliki representasi data 
-    - tidak terlalu banyak tipe yang terdapat di DOM
-    - oleh karena itu, sebenarnya DOM sangat sederhana, namun penggunaannya sangat bermanfaat
-        ex: - Document      : merupakan representasi dari halaman web
-            - Node          : merupakan base class untuk semua tipe data di DOM, seperti Document, Element & Attr
-            - Element       : merupakan representasi object element di halaman web (head, body, form, input dll)
-            - NodeList      : merupakan array/collection yang berisikan Node
-            - Attr          : attribute, merupakan representasi object attribut dalam element
-            - NamedNodeMap  : merupakan collection yang berisikan attr bentuk NamedNodeMap
+  - DOM memiliki representasi data 
+  - tidak terlalu banyak tipe yang terdapat di DOM
+  - oleh karena itu, sebenarnya DOM sangat sederhana, namun penggunaannya sangat bermanfaat
+    ex: - Document      : merupakan representasi dari halaman web
+        - Node          : merupakan base class untuk semua tipe data di DOM, seperti Document, Element & Attr
+        - Element       : merupakan representasi object element di halaman web (head, body, form, input dll)
+        - NodeList      : merupakan array/collection yang berisikan Node
+        - Attr          : attribute, merupakan representasi object attribut dalam element
+        - NamedNodeMap  : merupakan collection yang berisikan attr bentuk NamedNodeMap
 
 ________ 
 Document
-    - Document merupakan representasi object dari halaman web
-    - Dalam satu halaman web, terdapat satu dokumen, dan kita tidak perlu membuatnya secara manual, karena
-      otomatis akan ada di browser
-    - untuk mengakses Document, kita bisa gunakan object document 
-    https://developer.mozilla.org/en-US/docs/Web/API/Document
+  - Document merupakan representasi object dari halaman web
+  - Dalam satu halaman web, terdapat satu dokumen, dan kita tidak perlu membuatnya secara manual, karena
+    otomatis akan ada di browser
+  - untuk mengakses Document, kita bisa gunakan object document 
+  https://developer.mozilla.org/en-US/docs/Web/API/Document
 
-    > document Object
-        - doc secara otomatis dibuat dalam browser ketika membuka halaman web, sehingga kita tidak perlu membuat
-          Document secara manual
-        - kita bisa langsung menggunakan kata kunci document
+  > document Object
+    - document secara otomatis dibuat dalam browser ketika membuka halaman web, sehingga kita tidak perlu 
+      membuat document secara manual
+    - kita bisa langsung menggunakan kata kunci document
+  
+  > document Property
+    - Property dalam Document bisa kita gunakan untuk melihat semua data yang terdapat dalam document halaman web
+    https://developer.mozilla.org/en-US/Web/API/Document#properties
+  
+  > document Method 
+    - banyak method yang terdapat di document digunakan untuk memaniplulasi data DOM, misal membuat Node,
+      Element, Attribute, atau mengambil dan menyeleksi Node di dalam document
+    https://developer.mozilla.org/en-US/Web/API/Document#methods
+
+____ 
+Node
+  - adalah base class dari Document, Element, dan Attr (artinya semua fitur yang dimiliki di Node dimiliki turunannya)
+  - Node dalam DOM itu bentuknya adalah Tree (pohon), artinya dengan Node, kita bisa melihat Parent 
+    (node diatasnya),  Children(node dibawahnya), Sibling(node disebelahnya)
+  https://developer.mozilla.org/en-US/Web/API/Node
+
+  > Node Property
+    - property di node banyak berisi informasi reference ko Node lainnya, seperti ke node parent nya,
+      node children nya atau node sebelahnya
+    https://developer.mozilla.org/en-US/Web/API/Node#properties
+  
+  > node Methods 
+      - method di Node bisa digunakan untuk memanipulasi data Node di dalam node tsb, misal menambah/menghapus Node children
+    https://developer.mozilla.org/en-US/docs/Web/API/Node#properties
+        
     
-    > document Property
-        - document meiliki banyak sekali property 
-        - Property dalam Document bisa kita gunakan untuk melihat semua data yang terdapat dalam document halaman web
-        https://developer.mozilla.org/en-US/Web/API/Document#properties
-
     
 
 

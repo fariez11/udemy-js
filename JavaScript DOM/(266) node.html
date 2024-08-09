@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+</head>
+<body>
+
+    <ul id="menu">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+    </ul>
+
+    <input type="text" name="address" id="name">
+
+    <script>
+        const parent = document.getElementById("menu")
+        const child = document.getElementById("second")
+        const input = document.getElementById("name")
+        
+        console.log(parent);
+        console.log(child);
+
+        console.log("");
+        // node property
+        console.log(parent.childNodes);
+        console.log(parent.firstChild);
+        console.log(parent.isConnected);
+        console.log(parent.lastChild);
+        console.log(child.nextSibling);
+        console.log(input.name);
+        console.log(input.nodeType);
+        console.log(input.nodeValue);
+        console.log(child.parentNode);
+        console.log(input.parentElement);
+        console.log(child.previousSibling);                 // result #text (diakarenakan setelah first langsung enter (seakan akan ada teks) bukan li berikutnya/ second)
+        console.log(child.nextSibling.nextSibling);
+        console.log(child.textContent);
+        console.log("");
+        
+
+        // node method
+        const span = document.createElement('span')
+        parent.appendChild(span)
+        span.textContent = 'anonymous menu'
+
+        console.log(parent.contains(span));
+        console.log(parent.hasChildNodes(document.getElementById('second')));
+        // parent.insertBefore()
+        parent.removeChild(document.getElementById('third'))
+        // parent.replaceChild()
+        
+        
+    </script>
+</body>
+</html>

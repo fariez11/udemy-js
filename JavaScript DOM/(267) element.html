@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="title"></h2>
+    <p id="description"></p>
+
+
+    <!-- property -->
+
+    <div id="content" class="content">
+        <h1 id="subTitle" class="subTitle">This is title</h1>
+        <p id="desc" class="desc"> This is description</p>
+    </div>
+
+    <script>
+        const title = document.getElementById('title')
+        title.textContent = "Belajar JS DOM"
+
+        const desc = document.getElementById('description')
+        desc.textContent = "Belajar Javascript Document Object Model"
+
+        // element property
+        const content = document.getElementById('content')                  // get in create Element
+        const hOne = document.getElementById('subTitle')
+        console.log(content.id);
+        console.log(hOne.className);
+        console.log(hOne.tagName);
+
+        // element method
+        const descClass = document.querySelector('.desc')
+        console.log(descClass);
+        descClass.remove()
+        
+
+        // create Element
+        const ul = document.createElement("ul")
+        const li1 = document.createElement("li")
+        const li2 = document.createElement("li")
+        li1.textContent = "Menu Awal"
+        li2.textContent = "Menu Akhir"
+
+        content.appendChild(ul)
+        ul.appendChild(li1)
+        ul.appendChild(li2)
+
+        console.log(content);
+        
+
+        
+        
+    </script>
+</body>
+</html>

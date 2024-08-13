@@ -87,8 +87,20 @@ Element
     - kita juga bisa membuat object element baru, dan menambahkannya ke halaman web
     - kita bisa menggunakan method createElement(tag) pada Document
     https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-  
-    
+
+________ 
+NodeList
+  - adalah kumpulan dari node
+  - biasanya nodelist digunakan ketika kita menyeleksi banyak node sekaligus, misal ketika kita ingin
+    mengambil semua children di node misalnya
+  https://developer.mozilla.org/en-US/docs/Web/API/NodeList
+
+  > Live vs NodeList
+    - nodelist memiliki 2 tipe, yaitu Live dan Static
+    - Live artinya perubahan yang terjadi pada NodeListnya, akan merubah semua NodeList yang sama
+    - Static artinya perubahan yang terjadi pada NodeListnya, tidak akan merubah semua NodeList yang sama
+    - Saat kita menggunakan element.childNodes, NodeList tersebut bersifat Live
+    - Saat kita menggunakan document.querySelectorAll(), NodeList tersebut bersifat Static
     
 
 

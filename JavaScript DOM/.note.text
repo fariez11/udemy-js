@@ -106,6 +106,17 @@ Attr
   - Attr atau attribute merupakan representasidari attribut sebuah element, atau singkatnya
     key-valuenya, key nya adalah nama attribute, dan valuenya adalah value attribute
     https://developer.mozilla.org/en-US/docs/Web/API/Attr
+
+  > Attr value
+    - Kadang kebanyakan programmer ingin langsung mendapatkan value Attr
+    - jarang sekali menggunakan object Attr nya
+    - untuk value mendapatkan value secara langsung, kita bisa menggunakan method getAttribute() di element
+
+  > Membuat Attr
+    - Untuk membuat attr, kita bisa menggunakan document.createAttribute(name)
+    - Lalu untuk menambahkannya ke Element, kita bisa gunakan element.setAttributeNode(attr)
+    - Atau kita juga bisa langsung membuat attr langsung dengan name dan valuenya menggunakan
+      element.setAttribute(name,value)
     
 
 

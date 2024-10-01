@@ -6,14 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <img id="logo" src="" alt="Logo">
+    <img id="logo" src="https://www.programmerzamannow.com/img/pzn.png" alt="Logo" width="100">
+
+    <img id="muLogo" alt="mu">
 
     <script>
         const logo = document.getElementById('logo')
-        const source = document.getAttributeNode('src')
+        // const source = document.getAttributeNode('src')
+        // const attr = document.getAttribute('alt')
 
         console.log(logo);
-        console.log(source);
+        // console.log(source);
+
+        // Attr create
+        const mlogo = document.getElementById("muLogo")
+
+        const src = document.createAttribute("src")
+        src.value = "https://www.logo.wine/a/logo/Manchester_United_F.C./Manchester_United_F.C.-Logo.wine.svg"
+        mlogo.setAttributeNode(src)
+
+        mlogo.setAttribute("width", "150")
         
     </script>
 </body>

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <ul id="menu">
         <li>home</li>
         <li>about</li>
         <li>blog</li>
-        <li>contact</li><li>profile</li>
+        <li>contact</li>
+        <li>profile</li>
     </ul>
 
     <!-- Live vs Static -->
@@ -24,7 +27,18 @@
     <script>
         const li = document.querySelectorAll("li")
         console.log(li);
+        console.warn(li.item(2));
+        console.warn(li.entries(2));
+        li.forEach(
+            function (node) {
+                console.warn(node);
+            }
+        );
+
+        console.warn(li.keys());
+        console.log(li.values());
         
+
         const list = document.getElementById("menu").childNodes
         console.log(list);
 
@@ -42,14 +56,30 @@
         const menu2 = document.getElementById('menu2')
         menu2.append(document.createElement('li'))
         menu2.append(document.createElement('li'))
-        
+
         for (let i = 0; i < list2.length; i++) {
             list2[i].style.color = "grey"
-            
+
         }
         console.info(list2);
-        
-        
+            // jika yang static ingin bisa
+
+            let list3 = document.querySelectorAll('li')
+            const menu3 = document.getElementById('menu2')
+            menu3.appendChild(document.createElement('li'))
+            menu3.appendChild(document.createElement('li'))
+
+            console.log(list3);
+
+            list3 = document.querySelectorAll('li')
+            console.log(list3);
+            
+            
+
+
+
+
     </script>
 </body>
+
 </html>
